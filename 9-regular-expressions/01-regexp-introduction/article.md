@@ -1,26 +1,24 @@
-# Patterns and flags
+# Початок: шаблони та опції
 
-Regular expressions are patterns that provide a powerful way to search and replace in text.
+Регулярні вирази - це потужний інструмент для пошуку та заміни у тексті.
 
-In JavaScript, they are available via the [RegExp](mdn:js/RegExp) object, as well as being integrated in methods of strings.
+В JavaScript, вони доступні через [RegExp](mdn:js/RegExp) обʼєкт та інтегровані в методи рядків.
 
-## Regular Expressions
+## Регулярні вирази
 
-A regular expression (also "regexp", or just "reg") consists of a *pattern* and optional *flags*.
+Регулярний вираз (також відомий як регулярка) складається з *шаблону* (також кажуть паттерн) та необовʼязкових *опцій*.
 
-There are two syntaxes that can be used to create a regular expression object.
+Існує два синтаксису для створення регулярного виразу.
 
-The "long" syntax:
-
+Скорочений синтаксис:
 ```js
-regexp = new RegExp("pattern", "flags");
+regexp = /шаблон/; // без опцій
+regexp = /шаблон/gmi; // з опціями g,m та i (будуть описані далі)
 ```
 
-And the "short" one, using slashes `"/"`:
-
+...Та повний синтаксиc:
 ```js
-regexp = /pattern/; // no flags
-regexp = /pattern/gmi; // with flags g,m and i (to be covered soon)
+regexp = new RegExp("pattern", "flags");
 ```
 
 Slashes `pattern:/.../` tell JavaScript that we are creating a regular expression. They play the same role as quotes for strings.
